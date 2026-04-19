@@ -1,0 +1,6 @@
+TIMESTAMP: 2026-04-19 18:12:45
+SOURCE_IP: 185.10.44.123
+DESTINATION_PORT: 22
+PROTOCOL: SSH
+ATTEMPT_COUNT: 50
+STATUS: Multiple failed login attempts (Invalid user 'root') detected.

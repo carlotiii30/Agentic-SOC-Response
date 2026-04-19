@@ -1,0 +1,8 @@
+TIMESTAMP: 2026-04-19 18:05:12
+SOURCE_IP: 45.33.22.11
+DESTINATION_PORT: 443
+HTTP_METHOD: POST
+URL_PATH: /api/login
+PAYLOAD: "admin' --"
+PROTOCOL: HTTPS
+STATUS: SQL Injection pattern detected in request body.
