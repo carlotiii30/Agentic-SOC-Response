@@ -29,16 +29,32 @@ The system orchestrates four specialized agents in a `GroupChat` environment:
     ```bash
     poetry install
     ```
+     Install the AG2 provider extra depending on your model backend:
+     - Default (OpenAI):
+         ```bash
+         poetry add "ag2[openai]"
+         ```
+     - If you use Gemini:
+         ```bash
+         poetry add "ag2[gemini]"
+         ```
 3. **Environment Setup:**
    Copy the example environment file and add your credentials:
    ```bash
    cp .env.example .env
     ```
 ### Execution
-Run the automated response protocol:
-  ```bash
-  poetry run python main.py
-  ```
+The system requires a log file as input. You can also enable verbose mode to monitor agent orchestration:
+
+#### Basic execution
+```bash
+poetry run python main.py --input logs/incident_001.txt
+```
+
+#### Verbose mode (recommended for debugging)
+```bash
+poetry run python main.py -i logs/incident_001.txt -v
+```
 
 ## 🛡️ Security Disclaimer
 This project is a Proof of Concept (PoC) developed for cybersecurity research. Automated code execution should always be performed in sandboxed environments (e.g., Docker) when applied to production systems.
